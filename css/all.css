@@ -7819,3 +7819,23 @@ progress {
     display: none !important;
   }
 }
+.bg-dark::-webkit-input-placeholder {
+  color: #757575;
+  opacity: 1;
+}
+.bg-dark::-moz-placeholder {
+  color: #757575;
+  opacity: 1;
+}
+.bg-dark:-ms-input-placeholder {
+  color: #757575;
+  opacity: 1;
+}
+.bg-dark::-ms-input-placeholder {
+  color: #757575;
+  opacity: 1;
+}
+.bg-dark::placeholder {
+  color: #757575;
+  opacity: 1;
+}
