@@ -5,3 +5,55 @@
     color: #757575;
     opacity: 1;
 }
+
+.login-btn {
+    clip-path: polygon(
+    10% 0%,     
+    85% 0%,     
+    110% 60%,   
+    90% 100%,   
+    15% 100%,   
+    -10% 40%      
+    );        
+}
+
+.link-hover {
+    &:hover {
+        color: #FACC44!important;
+    }
+    
+}
+
+.secondary-color{
+    color: #616161 !important;
+}
+
+.divider-line {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0.25rem 0;
+}
+
+.search-bg {
+    background: #424242;
+    &:hover {
+        background: #424242;
+    }
+}
+
+.custom-input {
+    border-color: #BDBDBD;
+    background: #424242;
+    &::placeholder {
+        color: #757575;
+    }
+}
+
+.custom-icon {
+    color: #BDBDBD;
+    background: #757575;
+}
+
+.banner-img {
+    width: 100%;
+    object-fit: cover;
+}
