@@ -7840,13 +7840,13 @@ progress {
   opacity: 1;
 }
 
-.login-btn {
+.custom-btn {
   -webkit-clip-path: polygon(10% 0%, 85% 0%, 110% 60%, 90% 100%, 15% 100%, -10% 40%);
           clip-path: polygon(10% 0%, 85% 0%, 110% 60%, 90% 100%, 15% 100%, -10% 40%);
 }
 
 .link-hover:hover {
-  color: #FACC44 !important;
+  color: #facc44 !important;
 }
 
 .secondary-color {
@@ -7866,7 +7866,7 @@ progress {
 }
 
 .custom-input {
-  border-color: #BDBDBD;
+  border-color: #bdbdbd;
   background: #424242;
 }
 .custom-input::-webkit-input-placeholder {
@@ -7886,7 +7886,7 @@ progress {
 }
 
 .custom-icon {
-  color: #BDBDBD;
+  color: #bdbdbd;
   background: #757575;
 }
 
@@ -7894,4 +7894,14 @@ progress {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.fs-sm {
+  font-size: 28px;
+}
+
+@media (min-width: 768px) {
+  .fs-md-4 {
+    font-size: 4rem;
+  }
 }
