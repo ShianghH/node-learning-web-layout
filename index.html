@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant-TW">
   <head>
     <meta charset="utf-8" />
@@ -150,14 +150,17 @@
                 </li>
               </ul>
             </div>
-            <div class="divider-line"></div>
+            <div class="divider-line d-md-none"></div>
             <a class="nav-link link-light link-hover" href="#">關於我們</a>
             <a class="nav-link link-light link-hover" href="#">電競專欄</a>
-            <div class="divider-line"></div>
+            <div class="divider-line d-md-none"></div>
             <a class="nav-link d-none d-lg-block align-items-center" href="#">
               <span class="material-icons text-danger fs-4">shopping_cart</span>
             </a>
-            <a class="btn btn-danger text-white custom-btn px-4 d-none d-lg-block" href="#" style="height: 36px">
+            <a
+              class="btn btn-danger bg-gradient text-white custom-btn px-4 d-none d-lg-block"
+              href="#"
+              style="height: 36px">
               登入註冊
             </a>
             <a class="nav-link link-light link-hover d-lg-none d-flex" href="#">
@@ -183,9 +186,9 @@
           <div class="swiper-slide position-relative">
             <img src="./img/banner.jpg" alt="banner" class="img-fluid banner-img" />
             <div
-              class="position-absolute top-0 start-50 translate-middle-x d-flex flex-column align-items-center text-center w-100 mt-4">
-              <p class="text-white fw-bold fs-sm fs-md-4">電競操控，極速致勝</p>
-              <button class="btn btn-danger custom-btn px-4">立即選購</button>
+              class="position-absolute top-0 start-50 translate-middle-x d-flex flex-column align-items-center text-center w-100 mt-7 mt-md-10">
+              <p class="text-white fw-bold fs-sm fs-md-4 mb-0">電競操控，極速致勝</p>
+              <button class="btn btn-danger bg-gradient custom-btn px-4 mt-4 mt-md-6">立即選購</button>
             </div>
           </div>
           <div class="swiper-slide position-relative">
@@ -222,21 +225,101 @@
     </header>
 
     <!-- 熱銷推薦 -->
-    <section class="bg-dark text-white text-center" style="height: 600px">
+    <section class="bg-dark text-white py-9">
       <div class="container">
         <!-- prettier-ignore -->
-        <p class="h1"><span class="text-danger">熱銷</span>推薦</p>
+        <p class="h1 text-center mb-0 mb-6"><span class="text-danger">熱銷</span>推薦</p>
         <div class="row">
-          <div class="col-3">
-            <div class="card" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="col-12 col-md-3 mb-4">
+            <div class="card d-flex flex-column card-hover rounded-0 position-relative">
+              <img src="./img/card.png" class="card-img-top rounded-0" alt="card" />
+
+              <button
+                class="position-absolute rounded-circle top-0 end-0 m-2 heart-hover d-flex align-items-center justify-content-center">
+                <span class="material-icons" style="z-index: 10">favorite</span>
+              </button>
+
+              <div class="card-body d-flex flex-column bg-secondary text-white">
+                <h5 class="card-title card-text-hover">HEX MK Pro – 旗艦級機械式電競鍵盤</h5>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <p class="mb-0 fw-bold price-hover">NTD 4,990</p>
+                  <a
+                    href="#"
+                    class="btn d-flex rounded-0 align-items-center justify-content-center cart-hover stretched-link">
+                    <span class="material-icons text-danger fs-4">shopping_cart</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 mb-4">
+            <div class="card h-100 card-hover rounded-0 position-relative d-flex flex-column">
+              <img src="./img/card2.png" class="card-img-top rounded-0" alt="card" />
+
+              <button
+                class="position-absolute rounded-circle top-0 end-0 m-2 heart-hover d-flex align-items-center justify-content-center">
+                <span class="material-icons" style="z-index: 10">favorite</span>
+              </button>
+
+              <div class="card-body bg-secondary text-white d-flex flex-column">
+                <h5 class="card-title card-text-hover">Elite Controller V2 電競手把</h5>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <p class="mb-0 fw-bold price-hover">NTD 4,990</p>
+                  <a
+                    href="#"
+                    class="btn d-flex rounded-0 align-items-center justify-content-center cart-hover stretched-link">
+                    <span class="material-icons text-danger fs-4">shopping_cart</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 mb-4">
+            <div class="card d-flex flex-column h-100 card-hover rounded-0 position-relative">
+              <img src="./img/card3.png" class="card-img-top rounded-0" alt="card" />
+
+              <button
+                class="position-absolute rounded-circle top-0 end-0 m-2 heart-hover d-flex align-items-center justify-content-center">
+                <span class="material-icons" style="z-index: 10">favorite</span>
+              </button>
+
+              <div class="card-body d-flex flex-column bg-secondary text-white">
+                <h5 class="card-title card-text-hover">HEX Mini 超輕量滑鼠</h5>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <p class="mb-0 fw-bold price-hover">NTD 4,990</p>
+                  <a
+                    href="#"
+                    class="btn d-flex rounded-0 align-items-center justify-content-center cart-hover stretched-link">
+                    <span class="material-icons text-danger fs-4">shopping_cart</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 mb-4">
+            <div class="card d-flex flex-column h-100 card-hover rounded-0 position-relative">
+              <img src="./img/card4.png" class="card-img-top rounded-0" alt="card" />
+
+              <button
+                class="position-absolute rounded-circle top-0 end-0 m-2 heart-hover d-flex align-items-center justify-content-center">
+                <span class="material-icons" style="z-index: 10">favorite</span>
+              </button>
+
+              <div class="card-body d-flex flex-column bg-secondary text-white">
+                <h5 class="card-title card-text-hover">PX Wireless – 超低延遲無線光軸鍵盤</h5>
+                <div class="d-flex justify-content-between align-items-center mt-auto">
+                  <p class="mb-0 fw-bold price-hover">NTD 4,990</p>
+                  <a
+                    href="#"
+                    class="btn d-flex rounded-0 align-items-center justify-content-center cart-hover stretched-link">
+                    <span class="material-icons text-danger fs-4">shopping_cart</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="text-lg-end text-center mt-3"><button class="btn btn-danger custom-btn px-4">立即選購</button></div>
       </div>
     </section>
 
