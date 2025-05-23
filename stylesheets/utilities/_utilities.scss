@@ -14,9 +14,9 @@
 }
 
 .search-bg {
-  background: #424242;
+  background: $dark-gray;
   &:hover {
-    background: #424242;
+    background: $dark-gray;
   }
 }
 .custom-btn {
@@ -27,9 +27,9 @@
 
 .custom-input {
   border-color: #bdbdbd;
-  background: #424242;
+  background: $dark-gray;
   &::placeholder {
-    color: #757575;
+    color: $light-gray;
   }
 }
 
@@ -92,10 +92,6 @@
   .fs-md-4 {
     font-size: 4rem !important;
   }
-}
-
-.swiper-slide {
-  height: 600px; /* 預設 PC 高度 */
 }
 
 @media (max-width: 1200px) and (min-width: 769px) {
