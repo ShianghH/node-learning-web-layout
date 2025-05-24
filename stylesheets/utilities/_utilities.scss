@@ -88,6 +88,72 @@
   }
 }
 
+// 分頁樣式
+.banner-swiper .swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  /* 調整距離 */
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.banner-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: #eeeeee;
+  opacity: 0.7;
+  margin: 0 4px;
+  transition: all 0.3s;
+}
+
+.banner-swiper .swiper-pagination-bullet-active {
+  width: 16px;
+  height: 8px;
+  border-radius: 2px;
+  /* 變成圓角長條 */
+  background: #ea3f3f;
+  opacity: 1;
+}
+
+.thumbs-wrapper {
+  gap: 12px;
+  width: 100%;
+  margin-top: auto; // 把 swiper 推到底部
+}
+
+.mySwiper {
+  width: 100%;
+  max-width: 320px;
+}
+
+.mySwiper .swiper-slide {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mySwiper img {
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.custom-nav {
+  color: $white;
+  font-size: 24px;
+  width: 40px;
+  height: 100%;
+  border: 2px solid $light-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .fs-md-4 {
     font-size: 4rem !important;
