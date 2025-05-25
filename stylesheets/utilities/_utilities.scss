@@ -32,7 +32,9 @@
     color: $light-gray;
   }
 }
-
+.rounded-12 {
+  border-radius: 12px;
+}
 .banner-img {
   height: 100%;
   width: 100%;
@@ -119,25 +121,28 @@
 }
 
 .thumbs-wrapper {
-  gap: 12px;
+  display: flex;
+  align-items: stretch; // 讓子元素自動拉滿父層高度
+  gap: 12px; // 加左右間距
 }
 
 .mySwiper {
   width: 100%;
-  max-width: 320px;
+  height: 88px;
 }
 
 .mySwiper .swiper-slide {
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 88px;
+  &:hover {
+    border: 3px solid $danger;
+  }
 }
 
 .mySwiper img {
+  width: 100%;
   height: 100%;
-  border-radius: 4px;
   object-fit: cover;
+  display: block;
 }
 .custom-nav {
   color: $white;
@@ -150,6 +155,15 @@
   justify-content: center;
   cursor: pointer;
   font-weight: bold;
+  min-height: 88px;
+}
+
+.thumb-button-prev,
+.thumb-button-next {
+  user-select: none; /* 禁止選取文字 */
+}
+.text-justify {
+  text-align: justify;
 }
 
 @media (min-width: 768px) {
@@ -158,13 +172,34 @@
   }
 }
 
-@media (max-width: 1200px) and (min-width: 769px) {
-  .swiper-slide {
-    height: 360px;
+.left-arrow {
+  top: -250px;
+}
+.right-arrow {
+  top: -250px;
+  right: 0;
+}
+@media (min-width: 1930px) {
+  .left-arrow {
+    display: block !important;
+  }
+  .right-arrow {
+    display: block !important;
   }
 }
+
+@media (max-width: 1200px) and (min-width: 769px) {
+}
 @media (max-width: 768px) {
-  .swiper-slide {
-    height: 196px;
+  .mySwiper {
+    height: 56px;
+  }
+
+  .mySwiper .swiper-slide {
+    height: 56px;
+  }
+
+  .custom-nav {
+    min-height: 56px;
   }
 }
