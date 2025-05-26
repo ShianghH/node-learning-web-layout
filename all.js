@@ -1,3 +1,4 @@
+//  Banner Swiper 初始化
 const bannerSwiper = new Swiper('.banner-swiper', {
   loop: true,
   pagination: {
@@ -5,7 +6,7 @@ const bannerSwiper = new Swiper('.banner-swiper', {
     clickable: true
   }
 })
-
+// 縮圖 Swiper 初始化
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.mySwiper').forEach((swiperEl) => {
     new Swiper(swiperEl, {
@@ -20,4 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   })
+})
+
+// 玩家卡片 Swiper 初始化（偵測寬度，1920 以下啟用）
+
+const playerSwiper = new Swiper('#player-swiper', {
+  slidesPerView: 1.2,
+  spaceBetween: 16,
+  pagination: {
+    el: '#player-swiper .swiper-pagination',
+    clickable: true
+  },
+  breakpoints: {
+    768: { slidesPerView: 1.5 }
+  }
 })
