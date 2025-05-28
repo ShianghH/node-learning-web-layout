@@ -23,13 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 })
 
-// 玩家卡片 Swiper 初始化（偵測寬度，1920 以下啟用）
+// player卡片 Swiper 初始化（偵測寬度，1920 以下啟用）
 
 const playerSwiper = new Swiper('#player-swiper', {
   slidesPerView: 1.5,
   spaceBetween: 24,
   pagination: {
     el: '#player-swiper .swiper-pagination',
+    clickable: true
+  },
+  breakpoints: {
+    768: { slidesPerView: 1.5 }
+  }
+})
+
+const articlesSwiper = new Swiper('#articles-swiper', {
+  slidesPerView: 1.5,
+  spaceBetween: 24,
+  pagination: {
+    el: '#articles-swiper .swiper-pagination',
     clickable: true
   },
   breakpoints: {

@@ -1,3 +1,7 @@
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
 .link-hover {
   &:hover {
     color: #facc44 !important;
@@ -32,14 +36,15 @@
 
 //banner
 .banner-img {
-  height: 100%;
+  min-height: 196px;
+  max-height: 600px;
   width: 100%;
   object-fit: cover; /* 保持比例填滿不變形 */
   object-position: center;
 }
 
 .banner-content {
-  top: 10%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -219,7 +224,7 @@
   width: 306px;
 }
 
-.swiper-slide .card {
+.player-swiper .card {
   height: 694px !important;
 }
 
@@ -227,6 +232,39 @@
   position: static !important;
   margin-top: 24px;
   text-align: center;
+}
+
+// swiper-articles
+.swiper-articles .swiper-slide {
+  height: auto !important;
+}
+.articles-paginatio {
+  position: static !important;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.icon-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  &:hover {
+    background-color: $warning;
+    color: #000 !important;
+  }
+  i {
+    font-size: 20px;
+    line-height: 1;
+    vertical-align: middle;
+    color: inherit;
+  }
 }
 
 //尺寸
@@ -243,9 +281,6 @@
   .right-arrow {
     display: block !important;
   }
-}
-
-@media (max-width: 1200px) and (min-width: 769px) {
 }
 
 @media (max-width: 768px) {

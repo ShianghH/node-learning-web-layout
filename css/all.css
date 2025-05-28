@@ -9984,6 +9984,10 @@ progress {
     display: none !important;
   }
 }
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
 .link-hover:hover {
   color: #facc44 !important;
 }
@@ -10028,7 +10032,8 @@ progress {
 }
 
 .banner-img {
-  height: 100%;
+  min-height: 196px;
+  max-height: 600px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover; /* 保持比例填滿不變形 */
@@ -10037,7 +10042,7 @@ progress {
 }
 
 .banner-content {
-  top: 10%;
+  top: 15%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -10232,7 +10237,7 @@ progress {
   width: 306px;
 }
 
-.swiper-slide .card {
+.player-swiper .card {
   height: 694px !important;
 }
 
@@ -10240,6 +10245,46 @@ progress {
   position: static !important;
   margin-top: 24px;
   text-align: center;
+}
+
+.swiper-articles .swiper-slide {
+  height: auto !important;
+}
+
+.articles-paginatio {
+  position: static !important;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.icon-circle {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.icon-circle:hover {
+  background-color: #ffc107;
+  color: #000 !important;
+}
+.icon-circle i {
+  font-size: 20px;
+  line-height: 1;
+  vertical-align: middle;
+  color: inherit;
 }
 
 @media (min-width: 768px) {

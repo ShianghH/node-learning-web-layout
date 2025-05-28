@@ -15,41 +15,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/all.css" />
     <script src="./all.js" defer></script>
-
-    <style>
-      .title-with-line {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .title-with-line::before,
-      .title-with-line::after {
-        content: '';
-        width: 100px;
-        height: 2px;
-        background-color: #000;
-        margin: 0 8px;
-      }
-
-      .quality-home-design {
-        background-image: url('https://fakeimg.pl/1920x1080/?text=Quality%20Home%20Design');
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-
-      .header-slide-1 {
-        background-image: url('https://fakeimg.pl/1000/');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        height: 500px;
-      }
-    </style>
   </head>
 
   <body>
@@ -193,10 +162,11 @@
     </header>
 
     <!-- 熱銷推薦 -->
-    <section class="bg-dark py-9">
-      <!-- prettier-ignore -->
-      <p class="h1 text-center mb-0 mb-6 text-white fw-bold"><span class="text-danger">熱銷</span>推薦</p>
+    <section class="bg-dark py-6">
       <div class="container">
+        <!-- prettier-ignore -->
+        <p class="h1 text-center mb-0 mb-6 text-white fw-bold"><span class="text-danger">熱銷</span>推薦</p>
+
         <div class="row">
           <div class="col-12 col-md-3 mb-4">
             <div class="card d-flex flex-column card-hover rounded-0 position-relative">
@@ -287,7 +257,9 @@
             </div>
           </div>
         </div>
-        <div class="text-lg-end text-center mt-3"><button class="btn btn-danger custom-btn px-4">前往選購</button></div>
+        <div class="text-lg-end text-center mt-3">
+          <button class="btn btn-danger custom-btn px-4">前往選購</button>
+        </div>
       </div>
     </section>
 
@@ -316,7 +288,7 @@
               <!-- 上方文字內容 -->
               <div>
                 <h3 class="text-warning my-4 mt-lg-0">每一次敲擊，都是致勝的節奏</h3>
-                <p class="text-white text-justify">
+                <p class="text-white text-justify my-4">
                   指尖輕敲，鍵帽敲擊的回饋清脆響亮，節奏如戰鼓般迴響。光速觸發，毫秒級響應，技能釋放精準無誤，每一次操作都是勝利的鋪墊。RGB
                   燈效閃爍，宛如戰場中的炫目刀光。這不只是一把鍵盤，而是你與勝利之間的橋樑！
                 </p>
@@ -377,9 +349,10 @@
               <!-- 上方文字內容 -->
               <div>
                 <h3 class="text-warning my-4 mt-lg-0">疾速操控，精準鎖定勝利</h3>
-                <p class="text-white text-justify">
-                  指尖輕敲，鍵帽敲擊的回饋清脆響亮，節奏如戰鼓般迴響。光速觸發，毫秒級響應，技能釋放精準無誤，每一次操作都是勝利的鋪墊。RGB
-                  燈效閃爍，宛如戰場中的炫目刀光。這不只是一把鍵盤，而是你與勝利之間的橋樑！
+                <p class="text-white text-justify my-4">
+                  手掌輕貼，滑鼠完美貼合掌心，如同量身打造的戰鬥武器。毫秒級點擊反應，8000Hz
+                  回報率，每一次射擊都快人一步。DPI
+                  在瞬息之間切換，無論是微操還是大幅轉向，都準確無誤。你的指尖，決定戰局的走向，這一刻，勝利已然在握！
                 </p>
                 <div class="text-end">
                   <a href="#" class="btn btn-danger custom-btn">看更多新品</a>
@@ -415,12 +388,12 @@
 
     <!-- 裝備決定勝負，職業玩家推薦！ -->
     <section class="py-6 player-bg">
-      <p class="h1 text-center text-white fw-bold mb-0">
-        <span class="text-danger">裝備決定勝負</span>
-        ，職業玩家推薦！
-      </p>
-      <div class="d-none d-lg-block">
-        <div class="container">
+      <div class="container">
+        <p class="h1 text-center text-white fw-bold mb-0 mb-4">
+          <span class="text-danger">裝備決定勝負</span>
+          ，職業玩家推薦！
+        </p>
+        <div class="d-none d-lg-block">
           <div class="row mt-6">
             <div class="col-md-3">
               <div class="card h-100 bg-light-gray rounded-top-half-circle text-center rounded-bottom-0">
@@ -496,104 +469,101 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- player-Swiper  -->
-      <div class="container d-block d-lg-none">
-        <div class="swiper my-4" id="player-swiper">
-          <div class="swiper-wrapper player-swiper">
-            <div class="swiper-slide">
-              <div class="card player-card h-100 bg-light-gray text-center rounded-bottom-0">
-                <div class="card-top">
+        <!-- player-Swiper  -->
+        <div class="d-block d-lg-none">
+          <div class="swiper" id="player-swiper">
+            <div class="swiper-wrapper player-swiper">
+              <div class="swiper-slide">
+                <div class="card player-card h-100 bg-light-gray text-center rounded-bottom-0">
                   <img src="./img/player1.png" class="card-img-top p-1" alt="..." />
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-warning fw-bold mb-3 mt-2">毫秒決勝負，選擇至關重要！</h5>
+                    <p class="card-text text-white text-gradien">
+                      Leo "SwiftAim" Chen
+                      <br />
+                      FPS職業戰隊狙擊手
+                    </p>
+                    <p class="card-text text-white">
+                      在FPS遊戲中，0.1秒的延遲就能決定勝負!而 GameGear Phantom X
+                      Pro的8000Hz回報率，讓我的射擊手感幾乎沒有延遲,鎖頭快狠準。這是我用過最精準的滑鼠！
+                    </p>
+                    <div class="mt-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
+                  </div>
                 </div>
-
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title text-warning fw-bold mb-3 mt-2">毫秒決勝負，選擇至關重要！</h5>
-                  <p class="card-text text-white text-gradien">
-                    Leo "SwiftAim" Chen
-                    <br />
-                    FPS職業戰隊狙擊手
-                  </p>
-                  <p class="card-text text-white">
-                    在FPS遊戲中，0.1秒的延遲就能決定勝負!而 GameGear Phantom X
-                    Pro的8000Hz回報率，讓我的射擊手感幾乎沒有延遲,鎖頭快狠準。這是我用過最精準的滑鼠！
-                  </p>
-                  <div class="mt-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card player-card h-100 bg-light-gray text-center rounded-bottom-0">
+                  <img src="./img/player2.png" class="card-img-top p-1" alt="..." />
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-warning fw-bold mb-3 mt-2">極限APM，鍵盤反應才是關鍵！</h5>
+                    <p class="card-text text-white text-gradien">
+                      Jason "Storm" Wu
+                      <br />
+                      MOBA 賽事選手
+                    </p>
+                    <p class="card-text text-white">
+                      快速施放技能與操作英雄走位MOBA 中的致關鍵，HEX MK
+                      Pro旗艦級機械式電競鍵盤的無衝突按鍵設計讓我的指令從不漏接，Cherry MX
+                      青軸的手感更讓我的操作節奏感十足！
+                    </p>
+                    <div class="mt-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card player-card h-100 bg-light-gray text-center rounded-bottom-0">
+                  <img src="./img/player3.png" class="card-img-top p-1" alt="..." />
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-warning fw-bold mb-3 mt-2">賽車模擬，真實體驗才是重點！</h5>
+                    <p class="card-text text-white text-gradien">
+                      Alex "RacerX" Chang
+                      <br />
+                      eSports 賽車選手
+                    </p>
+                    <p class="card-text text-white">
+                      在eSports 模擬賽車團隊中講求精準操控與即時回饋，GameTurboTrack G1 速方向盤&踏板組的 1080
+                      力回饋技術讓每一次轉向都接近真車手感，加上全金屬踏板的高穩定度，真的讓我像在賽道上一樣！
+                    </p>
+                    <div class="mt-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card player-card h-100 bg-light-gray text-center rounded-bottom-0">
+                  <img src="./img/player4.png" class="card-img-top p-1" alt="..." />
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-warning fw-bold mb-3 mt-2">職業MOBA，按鍵配置決定戰局！</h5>
+                    <p class="card-text text-white text-gradien">
+                      Kevin "Blitz" Huang
+                      <br />
+                      MOBA 職業戰隊中路選手
+                    </p>
+                    <p class="card-text text-white">
+                      MOBA遊戲的精髓在於高APM與精準技能釋放，HEXBI2763的客製化鍵盤讓我能夠完全自訂按鍵布局,打造最符合我手感的競技裝備。每一次施法都更直覺，出手速度提升，戰局掌控更穩定！
+                    </p>
+                    <div class="mt-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="card player-card h-100 bg-light-gray text-center rounded-bottom-0">
-                <img src="./img/player2.png" class="p-1" alt="..." />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title text-warning fw-bold mb-3 mt-2">極限APM，鍵盤反應才是關鍵！</h5>
-                  <p class="card-text text-white text-gradien">
-                    Jason "Storm" Wu
-                    <br />
-                    MOBA 賽事選手
-                  </p>
-                  <p class="card-text text-white">
-                    快速施放技能與操作英雄走位MOBA 中的致關鍵，HEX MK
-                    Pro旗艦級機械式電競鍵盤的無衝突按鍵設計讓我的指令從不漏接，Cherry MX
-                    青軸的手感更讓我的操作節奏感十足！
-                  </p>
-                  <div class="mt-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card player-card h-100 bg-light-gray text-center rounded-bottom-0">
-                <img src="./img/player3.png" class="card-img-top p-1" alt="..." />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title text-warning fw-bold mb-3 mt-2">賽車模擬，真實體驗才是重點！</h5>
-                  <p class="card-text text-white text-gradien">
-                    Alex "RacerX" Chang
-                    <br />
-                    eSports 賽車選手
-                  </p>
-                  <p class="card-text text-white">
-                    在eSports 模擬賽車團隊中講求精準操控與即時回饋，GameTurboTrack G1 速方向盤&踏板組的 1080
-                    力回饋技術讓每一次轉向都接近真車手感，加上全金屬踏板的高穩定度，真的讓我像在賽道上一樣！
-                  </p>
-                  <div class="mt-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card player-card h-100 bg-light-gray text-center rounded-bottom-0">
-                <img src="./img/player4.png" class="card-img-top p-1" alt="..." />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title text-warning fw-bold mb-3 mt-2">職業MOBA，按鍵配置決定戰局！</h5>
-                  <p class="card-text text-white text-gradien">
-                    Kevin "Blitz" Huang
-                    <br />
-                    MOBA 職業戰隊中路選手
-                  </p>
-                  <p class="card-text text-white">
-                    MOBA遊戲的精髓在於高APM與精準技能釋放，HEXBI2763的客製化鍵盤讓我能夠完全自訂按鍵布局,打造最符合我手感的競技裝備。每一次施法都更直覺，出手速度提升，戰局掌控更穩定！
-                  </p>
-                  <div class="mt-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
-                </div>
-              </div>
-            </div>
+            <div class="swiper-pagination player-paginatio"></div>
           </div>
-          <div class="swiper-pagination player-paginatio"></div>
         </div>
       </div>
     </section>
 
     <!-- 你的競技優勢，從裝備與設定開始！ -->
     <section class="py-6 bg-deep-gray">
-      <p class="h1 text-center text-white fw-bold mb-0">
-        <span class="text-danger">你的競技優勢，</span>
-        從裝備與設定開始！
-      </p>
-      <div class="d-none d-lg-block">
-        <div class="container">
+      <div class="container">
+        <p class="h1 text-center text-wrap text-white fw-bold mb-0 mb-4">
+          <span class="text-danger">你的競技優勢，</span>
+          從裝備與設定開始！
+        </p>
+        <div class="d-none d-lg-block">
           <div class="row mt-6">
             <div class="col-md-3">
-              <div class="card h-100 text-white bg-light-gray text-center rounded-bottom-0">
+              <div class="card h-100 text-white bg-dark-gray text-center rounded-bottom-0">
                 <img src="./img/Rectangle.png" class="card-img-top" alt="..." />
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title fw-bold mb-3 mt-2">電競桌搭指南：打造沉浸式遊戲空間，提升競技表現！</h5>
@@ -607,7 +577,7 @@
               </div>
             </div>
             <div class="col-md-3">
-              <div class="card h-100 text-white bg-light-gray text-center rounded-bottom-0">
+              <div class="card h-100 text-white bg-dark-gray text-center rounded-bottom-0">
                 <img src="./img/Rectangle2.png" class="card-img-top" alt="..." />
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title fw-bold mb-3 mt-2">無線 vs. 有線裝備：電競鍵盤與滑鼠怎麼選？</h5>
@@ -620,7 +590,7 @@
               </div>
             </div>
             <div class="col-md-3">
-              <div class="card h-100 text-white bg-light-gray text-center rounded-bottom-0">
+              <div class="card h-100 text-white bg-dark-gray text-center rounded-bottom-0">
                 <img src="./img/Rectangle3.png" class="card-img-top" alt="..." />
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title fw-bold mb-3 mt-2">FPS 玩家必讀！如何挑選最適合你的電競滑鼠？</h5>
@@ -635,7 +605,7 @@
               </div>
             </div>
             <div class="col-md-3">
-              <div class="card h-100 text-white bg-light-gray text-center rounded-bottom-0">
+              <div class="card h-100 text-white bg-dark-gray text-center rounded-bottom-0">
                 <img src="./img/Rectangle4.png" class="card-img-top" alt="..." />
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title fw-bold mb-3 mt-2">職業選手 DPI 設定解析：你的滑鼠靈敏度調對了嗎？</h5>
@@ -650,139 +620,120 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="container d-block d-lg-none">
-        <div class="swiper my-4" id="player-swiper">
-          <div class="swiper-wrapper player-swiper">
-            <div class="swiper-slide">
-              <div class="card player-card h-100 bg-light-gray text-center rounded-bottom-0">
-                <div class="card-top">
-                  <img src="./img/player1.png" class="card-img-top p-1" alt="..." />
-                </div>
+        <div class="d-block d-lg-none">
+          <div class="swiper" id="articles-swiper">
+            <div class="swiper-wrapper swiper-articles">
+              <div class="swiper-slide d-flex h-100">
+                <div class="card h-100 d-flex flex-column bg-dark-gray rounded-bottom-0 text-white">
+                  <div class="card-top">
+                    <img src="./img/Rectangle.png" class="card-img-top" alt="..." />
+                  </div>
 
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title text-warning fw-bold mb-3 mt-2">毫秒決勝負，選擇至關重要！</h5>
-                  <p class="card-text text-gradien">
-                    Leo "SwiftAim" Chen
-                    <br />
-                    FPS職業戰隊狙擊手
-                  </p>
-                  <p class="card-text">
-                    在FPS遊戲中，0.1秒的延遲就能決定勝負!而 GameGear Phantom X
-                    Pro的8000Hz回報率，讓我的射擊手感幾乎沒有延遲,鎖頭快狠準。這是我用過最精準的滑鼠！
-                  </p>
-                  <div class="mt-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold mb-3 mt-2">電競桌搭指南：打造沉浸式遊戲空間，提升競技表現！</h5>
+                    <p class="card-text text-start">2025/03/01</p>
+                    <p class="card-text">
+                      你的遊戲環境影響你的勝率！一個理想的電競桌搭不僅能讓你更專注於比賽，還能減少疲勞並提升反應速度。本篇將解析最適合
+                      FPS、MOBA、賽車模擬玩家的桌面配置，從螢幕擺放、鍵鼠位置、燈光氛圍到人體工學，幫助你打造專屬的競技戰場！
+                    </p>
+                    <div class="mt-auto ms-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide d-flex h-100">
+                <div class="card h-100 d-flex flex-column bg-dark-gray rounded-bottom-0 text-white">
+                  <img src="./img/Rectangle2.png" class="card-img-top" alt="..." />
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold mb-3 mt-2">無線 vs. 有線裝備：電競鍵盤與滑鼠怎麼選？</h5>
+                    <p class="card-text">2025/02/21</p>
+                    <p class="card-text">
+                      「無線滑鼠會有延遲嗎？」、「無線鍵盤適合電競嗎？」這些問題困擾著許多玩家。其實，現代無線技術已經突破極限，許多專業選手都開始使用無線裝備！本篇將針對延遲、續航、穩定性進行比較，幫助你找到最適合的競技裝備！
+                    </p>
+                    <div class="mt-auto ms-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide d-flex h-100">
+                <div class="card h-100 d-flex flex-column bg-dark-gray rounded-bottom-0 text-white">
+                  <img src="./img/Rectangle3.png" class="card-img-top" alt="..." />
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold mb-3 mt-2">FPS 玩家必讀！如何挑選最適合你的電競滑鼠？</h5>
+                    <p class="card-text">2025/02/14</p>
+                    <p class="card-text">
+                      FPS 遊戲講求精準瞄準與快速反應，你的滑鼠就是影響表現的關鍵！高 DPI 一定比較好嗎？輕量滑鼠 vs.
+                      傳統滑鼠該怎麼選？本篇將解析感測器技術、DPI、重量、回報率、握持方式，讓你挑選最符合自己遊戲風格的
+                      FPS 競技 滑鼠！
+                    </p>
+                    <div class="mt-auto ms-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide d-flex h-100">
+                <div class="card h-100 d-flex flex-column bg-dark-gray rounded-bottom-0 text-white">
+                  <img src="./img/Rectangle4.png" class="card-img-top" alt="..." />
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold mb-3 mt-2">職業選手 DPI 設定解析：你的滑鼠靈敏度調對了嗎？</h5>
+                    <p class="card-text">2025/03/01</p>
+                    <p class="card-text">
+                      為什麼職業選手的滑鼠 DPI 設定都不一樣？本篇將拆解 FPS、MOBA、RTS 遊戲的最佳滑鼠 DPI 設定，告訴你低
+                      DPI 與高 DPI 的優勢與缺點，讓你找到最適合自己的靈敏度，提升操作精準度與反應速度！
+                    </p>
+                    <div class="mt-auto ms-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="card player-card h-100 bg-light-gray text-center rounded-bottom-0">
-                <img src="./img/player2.png" class="p-1" alt="..." />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title text-warning fw-bold mb-3 mt-2">極限APM，鍵盤反應才是關鍵！</h5>
-                  <p class="card-text text-gradien">
-                    Jason "Storm" Wu
-                    <br />
-                    MOBA 賽事選手
-                  </p>
-                  <p class="card-text">
-                    快速施放技能與操作英雄走位MOBA 中的致關鍵，HEX MK
-                    Pro旗艦級機械式電競鍵盤的無衝突按鍵設計讓我的指令從不漏接，Cherry MX
-                    青軸的手感更讓我的操作節奏感十足！
-                  </p>
-                  <div class="mt-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card player-card h-100 bg-light-gray text-center rounded-bottom-0">
-                <img src="./img/player3.png" class="card-img-top p-1" alt="..." />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title text-warning fw-bold mb-3 mt-2">賽車模擬，真實體驗才是重點！</h5>
-                  <p class="card-text text-gradien">
-                    Alex "RacerX" Chang
-                    <br />
-                    eSports 賽車選手
-                  </p>
-                  <p class="card-text">
-                    在eSports 模擬賽車團隊中講求精準操控與即時回饋，GameTurboTrack G1 速方向盤&踏板組的 1080
-                    力回饋技術讓每一次轉向都接近真車手感，加上全金屬踏板的高穩定度，真的讓我像在賽道上一樣！
-                  </p>
-                  <div class="mt-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card player-card h-100 bg-light-gray text-center rounded-bottom-0">
-                <img src="./img/player4.png" class="card-img-top p-1" alt="..." />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title text-warning fw-bold mb-3 mt-2">職業MOBA，按鍵配置決定戰局！</h5>
-                  <p class="card-text text-gradien">
-                    Kevin "Blitz" Huang
-                    <br />
-                    MOBA 職業戰隊中路選手
-                  </p>
-                  <p class="card-text">
-                    MOBA遊戲的精髓在於高APM與精準技能釋放，HEXBI2763的客製化鍵盤讓我能夠完全自訂按鍵布局,打造最符合我手感的競技裝備。每一次施法都更直覺，出手速度提升，戰局掌控更穩定！
-                  </p>
-                  <div class="mt-auto"><a href="#" class="btn btn-danger custom-btn">立即閱讀</a></div>
-                </div>
-              </div>
-            </div>
+            <div class="swiper-pagination articles-paginatio"></div>
           </div>
-          <div class="swiper-pagination player-paginatio"></div>
         </div>
       </div>
     </section>
 
-    <footer class="bg-light text-dark py-4">
-      <div class="container">
-        <div class="row align-items-center">
+    <!-- footer -->
+    <footer class="bg-dark-gray text-dark py-4">
+      <div class="container align-items-center text-center text-md-start">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="./img/LOGO.png" alt="" class="img-fluid" />
+          </div>
           <!-- 左側：標題 & 公司資訊 -->
-          <div class="col-md-4 mb-3 mb-md-0">
-            <h4 class="fw-bold h1">TTH 質感家</h4>
+          <div class="col-md-3 mb-3 mb-md-0">
+            <h4 class="text-warning">電競裝備基地有限公司</h4>
+            <h5 class="text-white mb-3">專為玩家打造的電競裝備基地</h5>
+            <p class="mb-1 text-white">100 台北市正義國際路 123 號 12 樓</p>
+            <p class="mb-0 text-white">統編：77776666</p>
           </div>
 
-          <div class="col-md-4 mb-3 mb-md-0">
+          <div class="col-md-3 mb-4 mb-md-0 d-flex flex-column justify-content-center">
             <nav>
-              <ul class="list-unstyled d-flex gap-3 mb-0">
-                <li>
-                  <a href="#" class="text-decoration-none text-dark">產品資訊</a>
-                </li>
-                <li>
-                  <a href="#" class="text-decoration-none text-dark">關於 TTH</a>
-                </li>
-                <li>
-                  <a href="#" class="text-decoration-none text-dark">靈感布置專欄</a>
-                </li>
+              <ul class="list-unstyled d-flex flex-md-column justify-content-center align-items-md-center gap-3 mb-0">
+                <li><a href="#" class="text-decoration-none text-warning">產品分類</a></li>
+                <li><a href="#" class="text-decoration-none text-warning">關於我們</a></li>
+                <li><a href="#" class="text-decoration-none text-warning">電競專欄</a></li>
               </ul>
             </nav>
           </div>
 
-          <div class="col-md-4 text-md-end">
-            <p class="mb-2 fw-semibold">Follow us</p>
-            <a href="#" class="text-dark text-decoration-none me-3">
+          <div class="col-md-3 text-md-end">
+            <a href="#" class="icon-circle text-decoration-none me-3">
               <i class="bi bi-facebook fs-5"></i>
             </a>
-            <a href="#" class="text-dark text-decoration-none me-3">
+            <a href="#" class="icon-circle text-decoration-none me-3">
               <i class="bi bi-instagram fs-5"></i>
             </a>
-            <a href="#" class="text-dark text-decoration-none">
+            <a href="#" class="icon-circle text-decoration-none">
               <i class="bi bi-line fs-5"></i>
             </a>
+            <div>
+              <p class="mb-0 mt-2 text-white">
+                © Copyright 2025 GameGear Hub.
+                <br class="d-md-none" />
+                All Rights Reserved
+              </p>
+            </div>
           </div>
         </div>
-        <p class="mb-1">
-          100 台北市正義國際路 123 號 12 樓
-          <br />
-          電話：07-77777766
-        </p>
-        <p class="mb-0">
-          版權宣告：© Copyright 2021 TTH.
-          <br class="d-md-none" />
-          All Rights Reserved
-        </p>
       </div>
     </footer>
 
