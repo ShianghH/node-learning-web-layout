@@ -274,6 +274,12 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .drop-menu:hover .drop-menu-list {
+    display: block !important; // 覆蓋 d-none
+  }
+}
+
 @media (min-width: 1930px) {
   .left-arrow {
     display: block !important;

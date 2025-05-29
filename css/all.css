@@ -10292,6 +10292,11 @@ body {
     font-size: 4rem !important;
   }
 }
+@media (min-width: 1200px) {
+  .drop-menu:hover .drop-menu-list {
+    display: block !important;
+  }
+}
 @media (min-width: 1930px) {
   .left-arrow {
     display: block !important;
