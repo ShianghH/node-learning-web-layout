@@ -1,15 +1,23 @@
 <!doctype html>
 <html lang="zh-Hant-TW">
-
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/all.css" />
+    <script src="./all.js" defer></script>
     <style>
       .products__title {
         background-image: url('https://fakeimg.pl/1920x1080/?text=Example');
@@ -37,195 +45,290 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">TTH 質感家 | 質感家具,打造舒適生活</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- nav -->
+    <nav class="navbar navbar-dark navbar-expand-xl bg-dark">
+      <div class="container">
+        <!-- logo -->
+        <a class="navbar-brand" href="#">
+          <img src="./img/LOGO.png" alt="logo" />
+        </a>
+        <!-- 搜尋欄 -->
+        <form class="d-none d-xl-flex" role="search">
+          <div class="input-group">
+            <input
+              type="search"
+              class="form-control bg-dark text-white border-secondary rounded-start rounded-0 border-end-0"
+              placeholder="搜索商品名"
+              aria-label="Search" />
+            <button class="btn btn-outline-secondary border-start-0" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+
+        <button
+          class="navbar-toggler d-xl-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto">
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <div class="navbar-nav ms-auto d-flex gap-4">
+            <form class="d-xl-none" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control search-bg border-secondary custom-input rounded-start rounded-0 border-end-0"
+                  placeholder="搜索商品名"
+                  aria-label="Search" />
+                <button class="btn btn-outline-secondary border-start-0 search-bg" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
             </form>
-            <a class="nav-link" href="#">產品分類</a>
-            <a class="nav-link" href="#">關於 TTH</a>
-            <a class="nav-link" href="#">靈感佈置專欄</a>
-            <a class="nav-link" href="#"><i class="bi bi-cart2"></i></a>
-            <a class="nav-link" href="#"><i class="bi bi-person-circle"></i></a>
+            <div class="drop-menu position-relative">
+              <a
+                class="nav-link link-light link-hover px-5"
+                data-bs-toggle="collapse"
+                href="#collapseProduce"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample">
+                產品分類
+              </a>
+
+              <div class="drop-menu-list position-absolute d-none" style="z-index: 99">
+                <ul class="list-group">
+                  <li class="list-group-item bg-dark border-0">
+                    <a href="" class="link-light text-decoration-none link-hover">電競鍵盤系列</a>
+                  </li>
+                  <li class="list-group-item bg-dark border-0">
+                    <a href="" class="link-light text-decoration-none link-hover">電競滑鼠系列</a>
+                  </li>
+                  <li class="list-group-item bg-dark border-0 bo">
+                    <a href="" class="link-light text-decoration-none link-hover">電競搖桿系列</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="collapse d-xl-none" id="collapseProduce">
+                <ul class="list-group">
+                  <li class="list-group-item bg-dark border-0">
+                    <a href="" class="link-light text-decoration-none link-hover">電競鍵盤系列</a>
+                  </li>
+                  <li class="list-group-item bg-dark border-0">
+                    <a href="" class="link-light text-decoration-none link-hover">電競滑鼠系列</a>
+                  </li>
+                  <li class="list-group-item bg-dark border-0 bo">
+                    <a href="" class="link-light text-decoration-none link-hover">電競搖桿系列</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="divider-line d-xl-none"></div>
+
+            <a class="nav-link link-light link-hover px-5" href="#">關於我們</a>
+            <a class="nav-link link-light link-hove px-5" href="#">電競專欄</a>
+            <div class="divider-line d-xl-none"></div>
+            <a class="nav-link d-none d-xl-block align-items-center px-5" href="#">
+              <span class="material-icons text-danger fs-4">shopping_cart</span>
+            </a>
+            <a
+              class="btn btn-danger bg-gradient text-white custom-btn px-4 d-none d-xl-block"
+              href="#"
+              style="height: 36px">
+              登入註冊
+            </a>
+            <a class="nav-link link-light link-hover d-xl-none d-flex" href="#">
+              <span class="material-symbols-outlined me-1">login</span>
+              登入註冊
+            </a>
           </div>
         </div>
       </div>
     </nav>
 
-    <header class="products__title d-flex justify-content-center align-items-center">
-      <div class="slanted-box">
-        <h2 class="slanted-content">產品分類</h2>
+    <header>
+      <div class="position-relative">
+        <img src="./img/ps-banner.png" alt="" class="img-fluid d-none d-md-block" />
+        <img src="./img/ps-banner -s.png" alt="" class="img-fluid d-md-none w-100" />
+        <div class="position-absolute start-50 top-50 translate-middle">
+          <h2 class="text-white fw-bold fs-3 fs-md-4 mb-0">產品分類</h2>
+        </div>
       </div>
     </header>
 
-
-    <nav class="container my-3" aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">首頁</a></li>
-        <li class="breadcrumb-item active" aria-current="page">沙發・休閒椅・躺椅</li>
-      </ol>
-    </nav>
-
-    <section class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <h4>產品分類</h4>
-          <div class="list-group">
-            <button type="button" class="list-group-item list-group-item-action border-0">沙發・休閒椅・躺椅</button>
-            <button type="button" class="list-group-item list-group-item-action border-0">茶桌・茶几・邊桌</button>
+    <div class="bg-deep-gray py-6 py-md-9">
+      <section class="container">
+        <div class="row">
+          <div class="col-md-3 d-none d-md-block list-group-item-action">
+            <div class="list-group">
+              <h4 class="text-white list-group-gray">產品分類</h4>
+              <button type="button" class="list-group-item border-0">沙發・休閒椅・躺椅</button>
+              <button type="button" class="list-group-item list-group-item-action border-0">茶桌・茶几・邊桌</button>
+            </div>
           </div>
-        </div>
-        <div class="col-md-9">
-          <h3>沙發.舒適的生活夥伴</h3>
-          <p>
-            在繁忙的日常中，沒有什麼比在舒適的沙發上放鬆更享受了。無論是與家人一起在柔軟的沙發上共度溫馨時光，還是在堅實耐用的沙發上開啟一場桌遊競賽，TTH質感家家具都為你提供各種風格與功能的沙發選擇，滿足你對舒適生活的所有期待。來TTH，輕鬆打造專屬於你的居家風格，享受高品質的生活體驗。
-          </p>
-          <p>共 5 項商品</p>
-          <hr class="border-2 border-dark">
-          <ul class="list-unstyled row">
-            <li class="col-md-4">
-              <div class="card position-relative border-0">
-                <span class="position-absolute badge text-bg-secondary" style="top: 15px;left: 15px;">Top 1</span>
-                <div class="position-absolute" style="right:15px; top: 5px;">
-                  <i class="bi bi-suit-heart" style="font-size: 30px;"></i>
-                </div>
+          <div class="col-md-9">
+            <h3 class="text-warning">電競鍵盤系列 | 電競操控，極速致勝</h3>
+            <div class="my-4">
+              <h5 class="text-white">精準操控，極速反應，提升你的電競表現！</h5>
+              <p class="text-white">
+                GameGear Hub
+                精選頂級電競鍵盤，無論是機械、光軸還是無線鍵盤，提供最快的響應速度與最舒適的手感，助你征戰每場比賽！
+              </p>
+            </div>
+            <hr class="hr-line" />
+            <p class="text-white my-4">共 5 項商品</p>
 
-                <img src="https://fakeimg.pl/200/" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">神隊友電腦椅</h5>
-                  <p class="card-text">$77,777</p>
-                </div>
-              </div>
-            </li>
-            <li class="col-md-4">
-              <div class="card position-relative border-0">
-                <span class="position-absolute badge text-bg-secondary" style="top: 15px;left: 15px;">Top 2</span>
-                <div class="position-absolute" style="right:15px; top: 5px;">
-                  <i class="bi bi-suit-heart" style="font-size: 30px;"></i>
-                </div>
-                <img src="https://fakeimg.pl/200/" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">神隊友電腦椅</h5>
-                  <p class="card-text">$77,777</p>
-                </div>
-              </div>
-            </li>
-            <li class="col-md-4">
-              <div class="card position-relative border-0">
-                <span class="position-absolute badge text-bg-secondary" style="top: 15px;left: 15px;">Top 3</span>
-                <div class="position-absolute" style="right:15px; top: 5px;">
-                  <i class="bi bi-suit-heart" style="font-size: 30px;"></i>
-                </div>
-                <img src="https://fakeimg.pl/200/" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">神隊友電腦椅</h5>
-                  <p class="card-text">$77,777</p>
-                </div>
-              </div>
-            </li>
-            <li class="col-md-4">
-              <div class="card position-relative border-0">
-                <div class="position-absolute" style="right:15px; top: 5px;">
-                  <i class="bi bi-suit-heart" style="font-size: 30px;"></i>
-                </div>
-                <img src="https://fakeimg.pl/200/" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">神隊友電腦椅</h5>
-                  <p class="card-text">$77,777</p>
-                </div>
-              </div>
-            </li>
-            <li class="col-md-4">
-              <div class="card position-relative border-0">
-                <div class="position-absolute" style="right:15px; top: 5px;">
-                  <i class="bi bi-suit-heart" style="font-size: 30px;"></i>
-                </div>
-                <img src="https://fakeimg.pl/200/" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">神隊友電腦椅</h5>
-                  <p class="card-text">$77,777</p>
-                </div>
-              </div>
-            </li>
-          </ul>
+            <ul class="list-unstyled row">
+              <li class="col-md-4">
+                <div class="card position-relative border-0">
+                  <span class="position-absolute badge text-bg-secondary" style="top: 15px; left: 15px">Top 1</span>
+                  <div class="position-absolute" style="right: 15px; top: 5px">
+                    <i class="bi bi-suit-heart" style="font-size: 30px"></i>
+                  </div>
 
-          <nav class="d-flex justify-content-center" aria-label="Page navigation example">
-            <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
+                  <img src="https://fakeimg.pl/200/" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">神隊友電腦椅</h5>
+                    <p class="card-text">$77,777</p>
+                  </div>
+                </div>
               </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
+              <li class="col-md-4">
+                <div class="card position-relative border-0">
+                  <span class="position-absolute badge text-bg-secondary" style="top: 15px; left: 15px">Top 2</span>
+                  <div class="position-absolute" style="right: 15px; top: 5px">
+                    <i class="bi bi-suit-heart" style="font-size: 30px"></i>
+                  </div>
+                  <img src="https://fakeimg.pl/200/" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">神隊友電腦椅</h5>
+                    <p class="card-text">$77,777</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-4">
+                <div class="card position-relative border-0">
+                  <span class="position-absolute badge text-bg-secondary" style="top: 15px; left: 15px">Top 3</span>
+                  <div class="position-absolute" style="right: 15px; top: 5px">
+                    <i class="bi bi-suit-heart" style="font-size: 30px"></i>
+                  </div>
+                  <img src="https://fakeimg.pl/200/" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">神隊友電腦椅</h5>
+                    <p class="card-text">$77,777</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-4">
+                <div class="card position-relative border-0">
+                  <div class="position-absolute" style="right: 15px; top: 5px">
+                    <i class="bi bi-suit-heart" style="font-size: 30px"></i>
+                  </div>
+                  <img src="https://fakeimg.pl/200/" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">神隊友電腦椅</h5>
+                    <p class="card-text">$77,777</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-4">
+                <div class="card position-relative border-0">
+                  <div class="position-absolute" style="right: 15px; top: 5px">
+                    <i class="bi bi-suit-heart" style="font-size: 30px"></i>
+                  </div>
+                  <img src="https://fakeimg.pl/200/" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">神隊友電腦椅</h5>
+                    <p class="card-text">$77,777</p>
+                  </div>
+                </div>
               </li>
             </ul>
-          </nav>
-        </div>
-      </div>
-    </section>
 
-    <footer class="bg-light text-dark py-4">
-      <div class="container">
-        <div class="row align-items-center">
+            <nav class="d-flex justify-content-center" aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-dark-gray text-dark py-4">
+      <div class="container text-center text-md-start">
+        <div class="row flex-column flex-lg-row align-items-center text-center gap-4 gap-lg-0">
+          <div class="col-lg-3 col-12">
+            <img src="./img/LOGO.png" alt="" class="img-fluid" style="height: 204px" />
+          </div>
           <!-- 左側：標題 & 公司資訊 -->
-          <div class="col-md-4 mb-3 mb-md-0">
-            <h4 class="fw-bold h1">TTH 質感家</h4>
+          <div class="col-lg-3 col-12 mb-3 mb-md-0 d-flex flex-column justify-content-center text-lg-start">
+            <h4 class="text-warning">電競裝備基地有限公司</h4>
+            <h5 class="text-white mb-3">專為玩家打造的電競裝備基地</h5>
+            <p class="mb-1 text-white">地址：100 台北市中正區重慶南路一段 122 號</p>
+            <p class="mb-0 text-white">統編：77776666</p>
           </div>
 
-          <div class="col-md-4 mb-3 mb-md-0">
+          <div class="col-lg-3 col-12 mb-4 mb-md-0 d-flex flex-column justify-content-center">
             <nav>
-              <ul class="list-unstyled d-flex gap-3 mb-0">
-                <li><a href="#" class="text-decoration-none text-dark">產品資訊</a></li>
-                <li><a href="#" class="text-decoration-none text-dark">關於 TTH</a></li>
-                <li><a href="#" class="text-decoration-none text-dark">靈感布置專欄</a></li>
+              <ul class="list-unstyled d-flex flex-lg-column justify-content-center align-items-md-center gap-3 mb-0">
+                <li><a href="#" class="text-decoration-none text-warning">產品分類</a></li>
+                <li><a href="#" class="text-decoration-none text-warning">關於我們</a></li>
+                <li><a href="#" class="text-decoration-none text-warning">電競專欄</a></li>
               </ul>
             </nav>
           </div>
 
-          <div class="col-md-4 text-md-end">
-            <p class="mb-2 fw-semibold">Follow us</p>
-            <a href="#" class="text-dark text-decoration-none me-3">
-              <i class="bi bi-facebook fs-5"></i>
-            </a>
-            <a href="#" class="text-dark text-decoration-none me-3">
-              <i class="bi bi-instagram fs-5"></i>
-            </a>
-            <a href="#" class="text-dark text-decoration-none">
-              <i class="bi bi-line fs-5"></i>
-            </a>
+          <div class="col-lg-3 d-flex flex-column gap-3">
+            <div>
+              <a href="#" class="icon-circle text-decoration-none me-3">
+                <i class="bi bi-facebook fs-5"></i>
+              </a>
+              <a href="#" class="icon-circle text-decoration-none me-3">
+                <i class="bi bi-instagram fs-5"></i>
+              </a>
+              <a href="#" class="icon-circle text-decoration-none">
+                <i class="bi bi-line fs-5"></i>
+              </a>
+            </div>
+
+            <div>
+              <p class="mb-0 mt-2 text-white">
+                © Copyright 2025 GameGear Hub.
+                <br />
+                All Rights Reserved
+              </p>
+            </div>
           </div>
         </div>
-        <p class="mb-1">
-          100 台北市正義國際路 123 號 12 樓<br />
-          電話：07-77777766
-        </p>
-        <p class="mb-0">
-          版權宣告：© Copyright 2021 TTH.
-          <br class="d-md-none" />
-          All Rights Reserved
-        </p>
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
   </body>
-
 </html>

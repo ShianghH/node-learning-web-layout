@@ -2,6 +2,8 @@ body {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
+//首頁
+
 .link-hover {
   &:hover {
     color: #facc44 !important;
@@ -265,6 +267,16 @@ body {
     vertical-align: middle;
     color: inherit;
   }
+}
+
+//商品分類
+.hr-line {
+  border-color: #bdbdbd;
+  border-width: 4px;
+  margin: 0;
+}
+.list-group-item-gray {
+  background-color: #757575 !important;
 }
 
 //尺寸
